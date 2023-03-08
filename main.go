@@ -7,4 +7,6 @@ import "anddd7.github.com/adcli/cmd"
 
 func main() {
 	cmd.Execute()
+	// asfa
+	// as.Execute()
 }
