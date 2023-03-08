@@ -2,12 +2,23 @@ package main
 
 import "fmt"
 
-const ENGLISH_HELLO_FMT = "Hello, %s!"
+const (
+	ENGLISH = "english"
+	SPANISH = "spanish"
+)
 
-func Hello(name string) string {
+const ENGLISH_HELLO_FMT = "Hello, %s!"
+const SPANISH_HELLO_FMT = "Hola, %s!"
+
+func Hello(name, language string) string {
 	target := "World"
 	if name != "" {
 		target = name
 	}
-	return fmt.Sprintf(ENGLISH_HELLO_FMT, target)
+	pattern := ENGLISH_HELLO_FMT
+	switch language {
+	case SPANISH:
+		pattern = SPANISH_HELLO_FMT
+	}
+	return fmt.Sprintf(pattern, target)
 }
