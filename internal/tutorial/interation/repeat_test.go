@@ -17,3 +17,9 @@ func BenchmarkRepeat(b *testing.B) {
 		Repeat("a")
 	}
 }
+
+func BenchmarkRepeatFast(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		RepeatFast("a")
+	}
+}
