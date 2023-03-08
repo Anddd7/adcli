@@ -1,4 +1,4 @@
-package tutorials
+package have_a_try
 
 import "fmt"
 
