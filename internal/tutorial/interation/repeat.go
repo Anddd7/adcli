@@ -1,18 +1,16 @@
 package iteration
 
-const REPEAT_TIMES = 5
-
-func Repeat(s string) string {
+func Repeat(s string, times int) string {
 	var repeated string
-	for i := 0; i < REPEAT_TIMES; i++ {
+	for i := 0; i < times; i++ {
 		repeated += s
 	}
 	return repeated
 }
 
-func RepeatFast(s string) string {
-	repeated := make([]byte, REPEAT_TIMES*len(s))
-	for i := 0; i < REPEAT_TIMES; i++ {
+func RepeatFast(s string, times int) string {
+	repeated := make([]byte, times*len(s))
+	for i := 0; i < times; i++ {
 		for j := 0; j < len(s); j++ {
 			repeated[j+i*len(s)] = s[j]
 		}
