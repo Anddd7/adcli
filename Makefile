@@ -33,3 +33,9 @@ check: fmt lint cover
 
 dep:
 	go mod download
+
+install: build
+	mv ./bin/adcli /usr/local/bin/adcli
+
+uninstall:
+	rm /usr/local/bin/adcli
